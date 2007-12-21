@@ -14,6 +14,7 @@ Patch0:         Net-Interface-0.04_2-irq.patch
 Patch1:         Net-Interface-0.04_2-linux.patch
 Url:            http://search.cpan.org/dist/%{module}/
 BuildRequires:	perl-devel
+BuildRoot:	%{_tmppath}/%{name}-%{version}
 
 %description
 Net::Interface is designed to make the use of ifconfig(1) and friends
