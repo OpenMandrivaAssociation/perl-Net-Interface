@@ -1,6 +1,6 @@
 %define module		Net-Interface
 %define name		perl-%{module}
-%define version		0.09
+%define version		0.11
 %define release		%mkrel 1
 
 Name:		%{name}
@@ -9,10 +9,9 @@ Release:	%{release}
 Summary: 	Perl extension to access network interfaces
 License: 	GPL or Artistic
 Group: 		Development/Perl
-Source: 	ftp://ftp.perl.org/pub/CPAN/modules/by-module/Net/MIKER/%{module}-%{version}.tar.bz2
-Patch0:         Net-Interface-0.04_2-irq.patch
+Url:        http://search.cpan.org/dist/%{module}/
+Source:     http://www.cpan.org/modules/by-module/Net/%{module}-%{version}.tar.gz
 Patch1:         Net-Interface-0.04_2-linux.patch
-Url:            http://search.cpan.org/dist/%{module}/
 BuildRequires:	perl-devel
 BuildRoot:	%{_tmppath}/%{name}-%{version}
 
@@ -24,7 +23,6 @@ attributes of an interface, and even create new logical or physical interfaces
 
 %prep
 %setup -q -n %{module}-%{version}
-%patch -p1
 %patch1 -p1
 
 %build
@@ -43,7 +41,7 @@ attributes of an interface, and even create new logical or physical interfaces
 
 %files
 %defattr(-,root,root)
-%doc Changes README README.jdp
+%doc Changes README*
 %{_mandir}/man3/*
 %{perl_vendorarch}/auto/Net
 %{perl_vendorarch}/Net
