@@ -1,6 +1,6 @@
 %define module		Net-Interface
 %define name		perl-%{module}
-%define version		0.11
+%define version		1.001
 %define release		%mkrel 1
 
 Name:		%{name}
@@ -11,7 +11,6 @@ License: 	GPL or Artistic
 Group: 		Development/Perl
 Url:        http://search.cpan.org/dist/%{module}/
 Source:     http://www.cpan.org/modules/by-module/Net/%{module}-%{version}.tar.gz
-Patch1:         Net-Interface-0.04_2-linux.patch
 BuildRequires:	perl-devel
 BuildRoot:	%{_tmppath}/%{name}-%{version}
 
@@ -23,7 +22,6 @@ attributes of an interface, and even create new logical or physical interfaces
 
 %prep
 %setup -q -n %{module}-%{version}
-%patch1 -p1
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
