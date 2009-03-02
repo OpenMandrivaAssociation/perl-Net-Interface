@@ -1,6 +1,6 @@
 %define module		Net-Interface
 %define name		perl-%{module}
-%define version		1.004
+%define version		1.007
 %define release		%mkrel 1
 
 Name:		%{name}
