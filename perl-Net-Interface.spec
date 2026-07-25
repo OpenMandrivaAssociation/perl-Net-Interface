@@ -1,15 +1,15 @@
 %define upstream_name	 Net-Interface
-%define upstream_version 1.012
+%define upstream_version 1.016
 
 Name:       perl-%{upstream_name}
-Version:    %perl_convert_version %{upstream_version}
-Release:	5
+Version:    %{upstream_version}
+Release:	1
 
 Summary: 	Perl extension to access network interfaces
 License: 	GPL+ or Artistic
 Group: 		Development/Perl
-Url:        https://search.cpan.org/dist/%{upstream_name}/
-Source0:    http://www.cpan.org/modules/by-module/Net/%{upstream_name}-%{upstream_version}.tar.gz
+Url:        https://metacpan.org/dist/Net-Interface
+Source0:    https://cpan.metacpan.org/authors/id/M/MI/MIKER/Net-Interface-%{upstream_version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
@@ -119,7 +119,7 @@ attributes of an interface, and even create new logical or physical interfaces
 - rebuild
 
 
-* Thu Apr 20 2006 Nicolas Lécureuil <neoclust@mandriva.org> 0.08-1mdk
+* Thu Apr 20 2006 Nicolas Lï¿½cureuil <neoclust@mandriva.org> 0.08-1mdk
 - New release 0.08
 - Change Source url
 
